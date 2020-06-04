@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Heart Disease Prediction System</title>
+
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="assets/demo/demo.css" rel="stylesheet" />
+  <style type="text/css">
+  * {
+  /*border: solid 1px rgba(0, 0, 0, .6);*/
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  box-sizing: border-box;
+}
+  	pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 2px;
+  width: 100%;
+}
+  </style>
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="white"  style="background-color: #EFEAEA">
+
+      <div class="logo">
+         <span  class="simple-text logo-normal">
+          Menu
+        </span>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item  ">
+         <a class="nav-link" href="accuracy.html">
+           <i class="material-icons">dashboard</i>
+           <p>Dashboard</p>
+         </a>
+       </li>
+
+         <li class="nav-item active ">
+          <a class="nav-link" href="science.html">
+            <i class="material-icons">data_usage</i>
+            <p>Data Science</p>
+          </a>
+        </li>
+        <li class="nav-item   ">
+          <a class="nav-link" href="comparison.html">
+            <i class="material-icons">file_copy</i>
+            <p>Comparitive Study</p>
+          </a>
+        </li>
+
+        <li class="nav-item  ">
+        <a class="nav-link" href="template.html">
+         <i class="material-icons">alarm</i>
+         <p>Prediction</p>
+        </a>
+        </li>
+
+        
+
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel" style="background-color: #e7e7e7;">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" >Data Science</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+
+              </li>
+              <!-- your navbar here -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Point #1 -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-warning">
+                  <h4 class="card-title ">Our Approach</h4>
+                  <p class="card-category"> Supervised or Unsupervised?</p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <p>The dataset contained features and the target class i.e diagnosis equal to 1 or 0. Hence we follow a <kbd>Supervised</kbd> approach.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+      <!-- Point #1 -->
+
+       <!-- Point #2 -->
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-warning">
+                  <h4 class="card-title ">Dataset Repository</h4>
+                  <p class="card-category"> Source and credibility of data?</p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <p>The dataset has been taken from <kbd>UCI Machine Learning Repository</kbd></p>
+                    <p>Source info: </br><code> 1. Hungarian Institute of Cardiology. Budapest: Andras Janosi, M.D.</br> 2. University Hospital, Zurich, Switzerland: William Steinbrunn, M.D.</br> 3. University Hospital, Basel, Switzerland: Matthias Pfisterer, M.D.</br> 4. V.A. Medical Center, Long Beach and Cleveland Clinic Foundation: Robert Detrano, M.D., Ph.D. </code></p>
+     <table class="table table-hover table-striped table-bordered table-sm">
+     	<thead class="thead-dark">
+     	<tr>
+     	<th>Sr. No</th>
+     	<th>Attribute Full Form</th>
+     	<th>Continuous/Catagorical</th>
+      <th>Data type</th>
+     	</tr>
+     	</thead>
+     	<tbody>
+     	<tr><td>1 </td><td>Age (in years) </td><td>Continuous</td><td>float64</td></tr>
+     	<tr><td>2 </td><td>Sex (1.0 = male; 0.0 = female)</td><td>Catagorical</td><td>float64</td></tr>
+     	<tr><td>3</td><td>Chest Pain Type </br>(1.0 = Typical Angina; 2.0 = Atypical Angina; 3.0 = Non-anginal Pain; 4.0 = Asymptomatic)</td><td>Categorical</td><td>float64</td></tr>
+     	<tr><td>4</td> <td>Resting Blood Pressure (in mm Hg on admission to the hospital)</td><td>Continuous</td><td>float64</td></tr>
+     	<tr><td>5</td> <td>Serum Cholestoral (in mg/dl) </td><td>Continuous</td><td>float64</td></tr>
+     	<tr><td>6</td><td>Fasting Blood Sugar >120 mg/dl (1 = true; 0 = false)</td><td>Categorical</td><td>bool</td></tr>
+
+     	<tr><td>7 </td><td>Resting Electrocardiographic Results (ECG / EKG)</br>(0.0 = normal; 1.0 = having ST-T wave abnormality, 2.0 = showing probable or definite left ventricular hypertrophy by Estes' criteria) </td><td>Continuous</td><td>float64</td></tr>
+      <tr><td>8 </td><td>Maximum Heart Rate Achieved</td><td>Continuous</td><td>float64</td></tr>
+      <tr><td>9</td><td>Exercise Induced Angina (1.0 = yes; 0.0 = no)</td><td>Categorical</td><td>bool</td></tr>
+      <tr><td>10</td> <td>ST Depression induced by exercise relative to rest </td><td>Continuous</td><td>float64</td></tr>
+      <tr><td>11</td> <td>Slope of peak exercise ST segment (1.0 = upsloping; 2.0 flat; 3.0 downsloping)</td><td>Continuous</td><td>float64</td></tr>
+      <tr><td>12</td><td>Number of major vessels colored by flourosopy (0.0 - 3.0)</td><td>Continuos</td><td>float64</td></tr>
+
+     	<tr><td>13 </td><td>Thal (3.0 = normal; 6.0 = fixed defect; 7.0 = reversable defect)</td><td>Continuous</td><td>float64</td></tr>
+		<tr><td>13 </td><td>Heart Rate</td><td>Continuous</td><td>float64</td></tr>
+      <tr><td>14 </td><td>Predicted Attribute </br>Value 0: < 50% diameter narrowing; Value 1: > 50% diameter narrowing </td><td>Continuous</td><td>float64</td></tr>
+
+     	</tbody>
+     </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+      <!-- Point #2 -->
+
+      <!-- Point #3 -->
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-warning">
+                  <h4 class="card-title ">Data Cleaning Process</h4>
+                  <p class="card-category">How did we clean our data?</p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                  	<p>The dataset had few rows with empty strings. We convert empty <kbd>string to NaN</kbd></p>
+                    <!-- <pre ><code>  df=pd.read_csv('fat.csv')</code></pre>	 -->
+  <pre ><code> df=pd.read_csv('dataset_new.csv')</code></pre>
+  <pre ><code> df_fullna = df_full.replace('?', np.nan)</code></pre>
+
+
+  <p>Now we fill in the <kbd>NaN</kbd> values to <kbd>median for continuous variable</kbd>  and <kbd>1 for catagorical variables</kbd> values and do some cleaning.</p>
+
+<br>
+<kbd>For cleaning the data:</kbd>
+<pre><code>df_fullna.isnull().sum()</code></pre>
+<pre><code>df = df_fullna</code></pre>
+<pre><code>df = df.convert_objects(convert_numeric=True) #turn data into numeric type for computation</code></pre>
+<pre><code>df['vessels'] = df['vessels'].fillna(df['vessels'].median())</code></pre>
+<pre><code>df['thal'] = df['thal'].fillna(df['thal'].median())</code></pre>
+<pre><code>df.isnull().sum()</code></pre>
+<pre><code>df.loc[:, "diagnosis"] = df.loc[:, "diagnosis"].apply(lambda x: 1 if x >= 1 else 0)</code></pre>
+<pre><code>df2=df</code></pre>
+</br>
+
+<kbd>Spliting the data for Training and Testing</kbd>
+<pre><code>X_train, X_test, y_train, y_test = train_test_split(df2.iloc[:,:-1], df2['diagnosis'], test_size = 0.33, random_state=44, stratify= df2['diagnosis'] )</code></pre>
+<pre><code>print(X_train.shape)</code></pre>
+<pre><code>print(X_test.shape)</code></pre>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+      <!-- Point #3 -->
+
+      <!-- Point #4 -->
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-warning">
+                  <h4 class="card-title ">Data Science</h4>
+                  <p class="card-category">How was data science applied to figure out trends in data?</p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+<kbd>Dataset Snipet</kbd><br>
+
+<!-- Age -->
+<pre><code># add the rows names
+header_row = ['age','sex','chest_pain','blood pressure','serum_cholestoral','fasting_blood_sugar',\
+               'electrocardiographic','max_heart_rate','induced_angina','ST_depression','slope','vessels','thal','heart_rate','diagnosis']
+
+# read csv file with Cleveland heart diseases data
+df_full = pd.read_csv('dataset_new.csv', names=header_row)
+df_full.head()</code></pre>
+<img src="../imgs/age_1.png">
+</br>
+<kbd>Dataset Description</kbd><br>
+<pre><code>df_full.describe())</code></pre>
+
+<img src="../imgs/description.png" width:"100%;" height:"200px;" >
+<br><br>
+
+
+<!-- Correlation -->
+<kbd> Correlation between the elements:</kbd> Finding correlation between elements<br>
+<pre><code>corr_df = df_full.corr()
+
+# Generate a mask for the upper triangle
+mask = np.zeros_like(corr_df, dtype=np.bool)
+mask[np.triu_indices_from(mask)] = True
+
+# Set up the matplotlib figure
+f, ax = plt.subplots(figsize=(11, 9))
+
+# Generate a custom diverging colormap
+cmap = sns.diverging_palette(220, 10, as_cmap=True)
+
+# Draw the heatmap with the mask and correct aspect ratio
+sns.heatmap(corr_df, mask=mask, cmap=cmap, vmax=.3, center=0,
+            square=True, linewidths=.5, cbar_kws={"shrink": .5})
+plt.title('Correlations between different predictors')
+plt.show()</code></pre>
+<img src="../imgs/correlation.png">
+<br><br>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+      <!-- Point #4 -->
+
+
+      <!-- Point #5 -->
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header card-header-warning">
+                  <h4 class="card-title ">Algorithm</h4>
+                  <p class="card-category">Which algorithms are used and why?</p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <!-- Bootstrap list -->
+                    <div class="row" style="width: 100%;height: 200px;">
+  <div class="col-4">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Random Forest</a>
+
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+      Random Forests perform implicit feature selection and provide a pretty good indicator of feature importance. Random Forests are <kbd>very quick</kbd> to train. It's a stroke of brilliance when a performance optimization happens to enhance model precision, or vice versa.
+      </div>
+      
+    </div>
+  </div>
+</div>
+                    <!-- Bootstrap list -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+      <!-- Point #5 -->
+
+      <!-- Point #6 -->
+
+<!--           <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-warning">
+                  <h4 class="card-title ">Features</h4>
+                  <p class="card-category">Why did we choose these features?</p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <p class="h5">Important features are:</p>
+                    <img src="../imgs/features.png"><br>
+                    <kbd>Index(['sg', 'al', 'su', 'bgr', 'sc', 'pot', 'pcv', 'wc', 'rc', 'dm'], dtype='object')</kbd>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div> -->
+
+      <!-- Point #6 -->
+
+
+      <!-- Point #7 -->
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-warning">
+                  <h4 class="card-title ">Optimization</h4>
+                  <p class="card-category">How did we optimize/improve the model?</p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <kbd>Cross-validation</kbd> is a method for robustly estimating test-set performance (generalization) of a model.<kbd>Grid-search</kbd> is a way to select the best of a family of models, <kbd>parametrized by a grid of parameters</kbd>.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+      <!-- Point #7 -->
+  </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+
+          <div class="copyright float-right">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>, 
+            <span></span>.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chartist JS -->
+  <script src="assets/js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="assets/js/material-dashboard.min.js?v=2.1.0" type="text/javascript"></script>
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <script src="assets/demo/demo.js"></script>
+</body>
+
+</html>
